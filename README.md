@@ -94,40 +94,75 @@ write.table(final, "DataCleaning.txt", row.names=F)
 CODEBOOK/DATA DICTIONARY:
 
 id
-  Subject ID
-    1..30
+   
+   Subject ID
+      
+      1..30
 
 activity
- Activities performed while wearing Smartphone
-  walking
-  walking upstairs
-  walking downstairs
-  sitting
-  standing
-  laying
+ 
+   Activities performed while wearing Smartphone
+  
+      walking
+  
+      walking upstairs
+  
+      walking downstairs
+  
+      sitting
+  
+      standing
+  
+      laying
+
+
 
 averagex
-  Average of means of the fast fourier transform of body acceleration signal in X-axial
-    -1..1
+  
+   Average of means of the fast fourier transform of body acceleration signal in X-axial
     
+      -1..1
+    
+
+
 averagey
-  Average of means of the fast fourier transform of body acceleration signal in Y-axial
-    -1..1
+  
+   Average of means of the fast fourier transform of body acceleration signal in Y-axial
     
+      -1..1
+    
+
+
 averagez
-  Average of means of the fast fourier transform of body acceleration signal in Z-axial
-    -1..1
+  
+   Average of means of the fast fourier transform of body acceleration signal in Z-axial
+    
+      -1..1
+
+
 
 averagesdx
-  Average of standard deviations of the fast fourier transform of body acceleration signal in X-axial
-    -1..1
+  
+   Average of standard deviations of the fast fourier transform of body acceleration signal in X-axial
+    
+      -1..1
+
+
 
 averagesdy
-  Average of standard deviations of the fast fourier transform of body acceleration signal in Y-axial
-    -1..1
+  
+   Average of standard deviations of the fast fourier transform of body acceleration signal in Y-axial
+    
+      -1..1
+
+
 
 averagesdz
-  Average of standard deviations of the fast fourier transform of body acceleration signal in Z-axial
-    -1..1
+  
+   Average of standard deviations of the fast fourier transform of body acceleration signal in Z-axial
+    
+      -1..1
+
+
 
 
