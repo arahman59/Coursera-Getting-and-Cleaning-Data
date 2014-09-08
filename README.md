@@ -3,7 +3,7 @@ Coursera-Getting-and-Cleaning-Data
 
 Final assignment for Coursera: Getting and Cleaning Data course
 
-How the Script Works:
+HOW THE SCRIPT WORKS:
 
 1. Before starting set your working directory (File>Change dir...) and make sure all data files are located within this directory
 2. Install the "reshape" package and call this library to R (library(reshape))
@@ -89,8 +89,45 @@ View(final)
 
 write.table(final, "DataCleaning.txt", row.names=F)
 
-CODEBOOK:
 
 
+CODEBOOK/DATA DICTIONARY:
+
+id
+  Subject ID
+    1..30
+
+activity
+ Activities performed while wearing Smartphone
+  walking
+  walking upstairs
+  walking downstairs
+  sitting
+  standing
+  laying
+
+averagex
+  Average of means of the fast fourier transform of body acceleration signal in X-axial
+    -1..1
+    
+averagey
+  Average of means of the fast fourier transform of body acceleration signal in Y-axial
+    -1..1
+    
+averagez
+  Average of means of the fast fourier transform of body acceleration signal in Z-axial
+    -1..1
+
+averagesdx
+  Average of standard deviations of the fast fourier transform of body acceleration signal in X-axial
+    -1..1
+
+averagesdy
+  Average of standard deviations of the fast fourier transform of body acceleration signal in Y-axial
+    -1..1
+
+averagesdz
+  Average of standard deviations of the fast fourier transform of body acceleration signal in Z-axial
+    -1..1
 
 
