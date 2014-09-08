@@ -21,6 +21,7 @@ train_label<-read.table("y_train.txt")
 
 
 
+
 4. Rename the training subject ID and activities column as "id" and "activity" using rename():
 
 
@@ -28,6 +29,7 @@ train_label<-read.table("y_train.txt")
 train_id<-rename(train_id,c(V1="id"))
 
 train_label<-rename(train_label,c(V1="activity"))
+
 
 
 
@@ -39,11 +41,13 @@ merge_train<-cbind(train_label, training)
 
 
 
+
 6. Bind the training subject id column to beginning of the newly formed training activity+training set using cbind():
 
 
 
 merge_train2<-cbind(train_id,merge_train)
+
 
 
 
@@ -55,7 +59,8 @@ test<-read.table("X_test.txt")
 
 test_id<-read.table("subject_test.txt")
 
-test_label<-read.table("y_test.txt"
+test_label<-read.table("y_test.txt")
+
 
 
 
@@ -69,11 +74,13 @@ test_label<-rename(test_label,c(V1="activity"))
 
 
 
+
 9. Bind the test activity column to the beginning of the test set using cbind():
 
 
 
 merge_test<-cbind(test_label, test)
+
 
 
 
@@ -85,6 +92,7 @@ merge_test2<-cbind(test_id,merge_test)
 
 
 
+
 11. Merge the final training and test sets that were just created using merge():
 
 
@@ -93,11 +101,13 @@ full<-merge(merge_test2, merge_train2, all=T)
 
 
 
+
 12. Read the features file into R to get headings for the variables using read.tables():
 
 
 
 headers<-read.table("features.txt")
+
 
 
 
@@ -117,6 +127,7 @@ var_keep<-c("activity", "id", "V266", "V267", "V268", "V269", "V270", "V271")
 
 full2<-full[var_keep]
 View(full2)
+
 
 
 
@@ -140,12 +151,14 @@ View(full2)
 
 
 
+
 16. Rename remaining variables such that V266=meanx, V267=meany, V268=meanz, V269=standarddeviationx, V270=standarddeviationy, V271=standarddeviationz using rename():
 
 
 
 full2<-rename(full2,c(V266="meanx", V267="meany", V268="meanz", V269="standarddeviationx", V270="standarddeviationy", V271="standarddeviationz"))
 View(full2)
+
 
 
 
@@ -158,7 +171,9 @@ View(full2)
 
 
 final<-full2 %>% group_by(id,activity) %>% summarize(averagex=mean(meanx),averagey=mean(meany), averagez=mean(meanz), averagesdx=mean(standarddeviationx), averagesdy=mean(standarddeviationy), averagesdz=mean(standarddeviationz))
+
 View(final)
+
 
 
 
